@@ -1,0 +1,253 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.7);
+    z-index: 10;
+}
+
+.modalBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    max-height: calc(100vh - 20%);
+    overflow: scroll;
+    width: 450px;
+    z-index: 10;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.modalBackground-delete {
+    padding-top: 22px;
+}
+
+.delete-title {
+    text-align: center;
+    margin-bottom: 11px !important;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+}
+
+.center {
+    justify-content: center;
+}
+
+.confirm-delete {
+    width: 275px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.white-block {
+    width: 450px;
+    min-height: inherit;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.form {
+    &-name-block {
+        padding: 24px 30px 25px 30px;
+    }
+
+    &-title {
+        @include fs-18-600;
+        margin-bottom: 32px;
+    }
+
+    &-name {
+        width: 100%;
+        height: 25px;
+        border: none;
+        border-bottom: 1px solid rgba(200, 197, 209, 0.5);
+
+        &+span {
+            padding-left: 15px;
+        }
+    }
+
+    &-name:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+#modalClose::after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px;
+    content: url("../assets/img/close_button.svg");
+}
+
+.form-add-contact-block {
+    width: 100%;
+    background-color: rgba(244, 243, 246, 1);
+    margin-bottom: 25px;
+}
+
+.block-add-contact {
+    width: inherit;
+    padding: 8px 0;
+    @include fs-14-500;
+}
+
+.save-contact {
+    padding: 12.5px 35px;
+    width: 147px;
+    background: #9873FF;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form-buttons-block {
+    place-items: center;
+    grid-template-columns: repeat(1, auto);
+}
+
+.cancel {
+    @include fs-12-400;
+    margin-bottom: 29px;
+}
+
+.select-btn {
+    background: #E7E5EB;
+    min-width: 123px;
+    max-width: 123px;
+    height: 37px;
+    border-right: 1px solid #C8C5D1;
+}
+
+.select {
+    width: 123px;
+    background-color: rgba(244, 243, 246, 1);
+    outline: 1px solid #C8C5D1;
+    z-index: 10;
+}
+
+.border-wrapper {
+    outline: 1px solid #C8C5D1;
+    height: 37px;
+}
+
+.select-item {
+    height: inherit;
+    padding: 9.5px 12px;
+    text-align: left;
+}
+
+.select-item:first-child {
+    background-color: rgba(231, 229, 235, 1);
+}
+
+.form-select-block {
+    background-color: rgba(244, 243, 246, 1);
+}
+
+.label {
+    width: 100%;
+    height: 100%;
+}
+
+.person-contact-data {
+    width: inherit;
+    height: inherit;
+    padding-left: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.template {
+    @include fs-14-400;
+    width: inherit !important;
+    height: inherit;
+    position: absolute !important;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact-input-block {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.delete-contact-data::after {
+    content: url('./img/delete_contact.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 37px;
+    background-color: rgb(231, 229, 235);
+    border-left: 1px solid rgb(200, 197, 209);
+}
+
+.list-wrappeer {
+    position: relative;
+    width: 123px;
+    height: 37px;
+    overflow: hidden;
+    background-color: $cellContact;
+}
+
+.placeholder {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: lightgrey;
+    top: 50%;
+    transform: translateY(-25%);
+    left: 10px;
+}
+
+
+
+
+
+.input-invalid {
+    border-color: red;
+}
+
+.input-invalid+span::after {
+    content: '✖';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: red;
+}
+
+.input-correct {
+    border-color: green;
+}
+
+.input-correct+span::after {
+    content: '✔';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: green;
+}

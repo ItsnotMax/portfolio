@@ -1,0 +1,72 @@
+.action-btn {
+    text-align: center;
+    vertical-align: super;
+    width: fit-content;
+
+    &:focus,
+    &:active {
+        border-bottom: 1px solid black;
+    }
+}
+
+.change-btn:hover {
+    color: green;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+.social-link {
+    &:hover {
+        svg {
+            transform: scale(1.5);
+        }
+    }
+}
+
+.extra-social-link:hover {
+    background-color: darkgray;
+}
+
+#newclient {
+    position: relative;
+
+    svg {
+        fill: #9873FF;
+        transform: translateY(1px);
+    }
+
+    &:focus,
+    &:hover {
+        background-color: darkgray;
+        color: wheat;
+
+        svg {
+            fill: wheat;
+        }
+    }
+}
+
+.label {
+    position: relative;
+    cursor: text;
+
+    .template {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        @include fs-14-400;
+        color: #999;
+        transition: all 0.1s linear;
+        width: 0px;
+    }
+
+    .template-effect {
+        transform: translateY(-15px) scale(0.55);
+    }
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
