@@ -1,0 +1,59 @@
+@mixin back-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin fs-12-400 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin fs-16-400 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin fs-16-500 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin fs-20-400 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@mixin fs-20-500 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@mixin fs-20-600 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@mixin fs-25-500 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+@mixin fs-30-400 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+@mixin fs-30-400 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@mixin fs-30-600 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@mixin fs-40-600 {
+    font-size: 40px;
+    font-weight: 600;
+}
