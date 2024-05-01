@@ -1,7 +1,8 @@
 # portfolio
-This is where I keep my academic and other works.
 
-Hello, I`m Max! 👋
+
+Hello, I`m Max and this is where I keep my academic and other works! 👋
+
 
 About me
 
@@ -20,6 +21,7 @@ How to contact me
 
 📱Telegram: @UshiLolika
 
+
 Personal interests
 
 🎮 From time to time I like to play video games.
@@ -32,4 +34,5 @@ Personal interests
 Rest
 
 😄 I prefer to be addressed as “you”, I don’t like formalities.
+
 ⚡ Interesting fact: my cat's name is Lola
