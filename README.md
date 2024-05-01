@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 
 Hello, I`m Max and this is where I keep my academic and other works! 👋
