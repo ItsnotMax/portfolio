@@ -1,0 +1,14 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "description": "serialization, deserialization of an array of numbers into a ASCII string + tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Maxim Ushakov",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
