@@ -1,0 +1,97 @@
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.content {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bubble {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: #4CAF50;
+	text-align: center;
+	line-height: 200px;
+	color: white;
+	font-size: 36px;
+}
+
+.hole {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: white;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.hole:hover .button {
+	background-color: blue;
+	transform: none;
+}
+
+.button {
+	background-color: blue;
+	border: none;
+	border-radius: 50%;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: black;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+	background-color: #45a049;
+	transform: scale(1.05);
+}
+
+.button:active {
+	background-color: #388e3c;
+	transform: scale(0.95);
+}
+
+.button:focus {
+	outline: none;
+}
+
+.clicked-btn {
+	color: black !important;
+	position: relative;
+	margin-top: 26%;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	opacity: 0;
+	transform: translateY(-10px);
+}
+
+.visible.clicked-btn {
+	animation: fadeInDown 0.5s ease forwards;
+}
+
+
+
+.no-select {
+	user-select: none;
+}
