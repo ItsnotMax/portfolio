@@ -3,6 +3,7 @@
 
 Hello, I`m Max and this is where I keep my academic and other works! 👋
 
+In various branches you can familiarize yourself with my works.
 
 About me
 
