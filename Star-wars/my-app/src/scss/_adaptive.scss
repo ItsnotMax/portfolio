@@ -1,0 +1,36 @@
+@media(max-width: 4096px) {
+    .flex-aside {
+        height: inherit;
+        width: 15%;
+
+        .episode-link {
+            @include fs-20-400;
+        }
+    }
+
+    .flex-description {
+        width: 85%;
+        height: inherit;
+    }
+
+    .contaner-description {
+        padding: 50px 50px;
+        height: 100%;
+        position: relative;
+
+        .h1 {
+            margin-bottom: 15px;
+            @include fs-40-600;
+        }
+
+        .waiting-text {
+            text-align: center;
+            @include fs-20-500;
+        }
+
+        .arrow {
+            height: inherit;
+            transform: scale(0.7) rotate(180deg);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.list-episodes {
+    height: inherit;
+    overflow-y: hidden;
+
+    li {
+        background-color: black;
+        user-select: none;
+        outline: 1px solid gold;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .episode {
+        width: 100%;
+        height: calc(100vh / 6);
+
+        button {
+            color: gold;
+        }
+    }
+}

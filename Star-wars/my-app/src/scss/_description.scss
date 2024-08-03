@@ -1,0 +1,53 @@
+.arrow-wrapper {
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.flex-description {
+    color: gold;
+}
+
+.h5 {
+    margin: 0 0 0 auto;
+    @include fs-20-400;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+#back-img {
+    @include back-img;
+    background-position: 50% 0;
+}
+
+.btn-links-info {
+    padding: 25px 0;
+    justify-content: space-between
+}
+
+.btn-info {
+    @include fs-25-500;
+    color: gold;
+}
+
+.grid-list {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: min-content;
+    gap: 30px;
+}
+
+.grid-item {
+    @include fs-20-400;
+    color: gold;
+    width: fit-content;
+    height: fit-content;
+}
+
+.for-list {
+    top: 0 !important;
+    transform: translate(-200%, 0) !important;
+}
