@@ -1,0 +1,154 @@
+html {
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: "Gilroy", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+}
+
+.block {
+    display: block;
+}
+
+.reset-btn {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.cursor-auto {
+    cursor: auto;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+.visible {
+    overflow: visible !important;
+}
+
+.unvisible {
+    overflow: hidden !important;
+    z-index: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-contacts {
+    grid-template-columns: repeat(5, 16px);
+    grid-template-rows: repeat(1, 16px);
+    gap: 7px;
+}
+
+.action-btn {
+    text-align: left;
+
+    svg {
+        transform: translate(4px, 3px);
+    }
+}
+
+.table-action {
+    tr {
+        border-bottom: none !important;
+        column-gap: 30px;
+    }
+}
+
+.extra-social-link {
+    font-size: 8px;
+    font-weight: 500;
+    border: 1px solid #9873FF;
+    border-radius: 50%;
+}
+
+.sort {
+    user-select: none;
+}
+
+.not-selectable {
+    -webkit-user-select: none;
+    /* Для веб-кит браузеров */
+    -moz-user-select: none;
+    /* Для Firefox */
+    -ms-user-select: none;
+    /* Для Internet Explorer */
+    user-select: none;
+    /* Стандартное свойство */
+}
+
+.props-id {
+    margin-left: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B0B0B0;
+}
