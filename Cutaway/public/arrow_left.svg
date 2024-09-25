@@ -1,9 +1,0 @@
-<svg width="150" height="100" viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg" class="arrow arrow-left">
-  <defs>
-    <linearGradient id="fadeLeft" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0%" stop-color="yellow" stop-opacity="0"/>
-      <stop offset="100%" stop-color="yellow" stop-opacity="1"/>
-    </linearGradient>
-  </defs>
-  <path d="M80 20 L20 50 L80 80 L70 50 Z" stroke="url(#fadeLeft)" stroke-width="10" fill="none" />
-</svg>

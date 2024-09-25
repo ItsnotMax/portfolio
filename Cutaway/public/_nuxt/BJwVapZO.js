@@ -1,1 +1,0 @@
-import{_ as r,c as t,r as s,o as c}from"./iTOEm-7j.js";const n={},o={class:"flex justify-center items-center w-full min-h-screen p-[2vw] bg-[linear-gradient(45deg,_#D6A5C0,_#A1C4FD)] 2xl:px-[8rem]"};function l(e,a){return c(),t("div",o,[s(e.$slots,"default")])}const f=r(n,[["render",l]]);export{f as default};
