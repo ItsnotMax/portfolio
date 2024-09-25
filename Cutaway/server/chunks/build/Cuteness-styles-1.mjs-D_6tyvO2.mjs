@@ -1,0 +1,4 @@
+const Cuteness_vue_vue_type_style_index_0_scoped_093bb225_lang = ".wrapper[data-v-093bb225]{width:100%}.container[data-v-093bb225],.wrapper[data-v-093bb225]{overflow:hidden;position:relative}.container[data-v-093bb225]{border:1rem solid #e5e7eb;box-shadow:0 0 0 -200px hsla(0,0%,100%,.1);display:flex;height:90vh;justify-content:flex-start}.wrapper__item[data-v-093bb225]{align-items:center;color:#fff;height:90vh;justify-content:center;left:0;min-width:100%;position:absolute;top:0}.wrapper__item>img[data-v-093bb225]{height:100%;min-width:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center 40%;object-position:center 40%}.wrapper__item:first-of-type img[data-v-093bb225]{-o-object-fit:contain;object-fit:contain}";
+
+export { Cuteness_vue_vue_type_style_index_0_scoped_093bb225_lang as C };
+//# sourceMappingURL=Cuteness-styles-1.mjs-D_6tyvO2.mjs.map
