@@ -40,20 +40,11 @@ import CutawayAnimation from '~/components/CutawayAnimation.vue';
 import MainBtn from '~/components/MainBtn.vue';
 import Carousel from '~/components/Carousel.vue';
 
-const imagesList = ref()
 const isModalOpen = ref(false)
 
 const { data: carouselData} = await useFetch(`/api/links`);
-const { } = await useAsyncData('items', async () => {
-    try {
-        const response = await fetch('/api/cuteness');
-        const data = await response.json();
-        imagesList.value = Array.from(data).slice(1, 4);
-    } catch (error) {
-        imagesList.value = [];
-    }
-    return
-});
+const { data: imagesList }= await useFetch('/api/cuteness');
+
 </script>
 
 <style scoped lang="scss"></style>

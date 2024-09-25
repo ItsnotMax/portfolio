@@ -10,7 +10,7 @@
             </li>
         </ul>
     </div>
-    <nuxt-link class="absolute top-0 left-0 text-[2rem]" to="/">Back</nuxt-link>
+    <nuxt-link class="fixed top-0 left-0 text-[2rem]" to="/">Back</nuxt-link>
 </template>
 
 <script setup lang="js">
