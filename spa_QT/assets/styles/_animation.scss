@@ -1,0 +1,116 @@
+.pagination__item:hover {
+    background-color: #E0E0E0;
+}
+
+.pagination__item:active {
+    background-color: #CCCCCC;
+    transform: scale(0.95);
+}
+
+.pagination__item:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #007BFF;
+}
+
+.button-group__choose-language img:hover {
+    transform: scale(1.2);
+}
+
+.button-group__choose-language img:active {
+    transform: scale(0.95);
+}
+
+.button--switch-language:hover {
+    background-color: #E0E0E0;
+}
+
+.button--switch-language:active {
+    background-color: #CCCCCC;
+    transform: scale(0.95);
+}
+
+.button--switch-language:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #007BFF;
+}
+
+
+
+
+
+
+
+
+.nav__link-group a {
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav__link-group a::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    bottom: -10px;
+    left: -15px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: -1;
+}
+
+.nav__link-group a:hover::before {
+    background-color: #f0f0f0;
+}
+
+.nav__link-group a:active::before {
+    background-color: #e0e0e0;
+}
+
+.nav__link-group a.active::before {
+    background-color: #007BFF;
+}
+
+.footer__link--animation a {
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1;
+}
+
+.footer__link--animation a::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: -1;
+}
+
+.footer__link--animation a:hover::before {
+    background-color: #f0f0f0;
+}
+
+.footer__link--animation a:active::before {
+    background-color: #e0e0e0;
+}
+
+.footer__link--animation a:focus::before {
+    background-color: #f0f0f0;
+}
+
+
+.footer__link--animation a:hover {
+    color: #007BFF;
+}
+
+.footer__link--animation a:active {
+    color: #0056b3;
+}
+
+.footer__link--animation a:focus {
+    box-shadow: 0 0 0 2px #007BFF;
+}
