@@ -7,34 +7,41 @@ from bs4 import BeautifulSoup
 
 
 def pars(url):
-    response = requests.get(url)
-    page_content = response.text
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Выбрасывает исключение при ошибке HTTP
+    except requests.exceptions.RequestException as e:
+        print(f"Ошибка при запросе: {e}")
+        return
 
-    soup = BeautifulSoup(page_content, "html.parser")
+    try:
+        page_content = response.text
+        soup = BeautifulSoup(page_content, "html.parser")
 
-    title = find_title(soup) or "Заголовков нет"
-    author = find_author(soup) or "Автора нет"
-    article = find_article(soup) or "Текста статьи нет"
-    date = find_date(soup) or "Дата не указана"
+        title = find_title(soup) or {"title": "Заголовков нет", "second_title": ""}
+        author = find_author(soup) or {"author": "Автора нет"}
+        article = find_article(soup) or {"text": "Текста статьи нет"}
+        date = find_date(soup) or {"date": "Дата не указана"}
 
-    print("--- Заголовок ---")
-    print(title["title"])
-    print(title["second_title"])
-    print()
-    print("--- Дата ---")
-    print(date["date"])
-    print()
-    print("--- Автор ---")
-    print(author["author"])
-    print()
-    print("--- Текст статьи ---")
-    print(article["text"])
+        print("--- Заголовок ---")
+        print(title["title"])
+        print(title["second_title"])
+        print()
+        print("--- Дата ---")
+        print(date["date"])
+        print()
+        print("--- Автор ---")
+        print(author["author"])
+        print()
+        print("--- Текст статьи ---")
+        print(article["text"])
+
+    except Exception as e:
+        print(f"Ошибка при парсинге страницы: {e}")
 
 
 if __name__ == "__main__":
     pars(url="https://ria.ru/20240401/pozhar-1937078258.html")
-
-
 
 
 # Или имелись ввиду подобные паттерны?
