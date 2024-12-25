@@ -1,0 +1,42 @@
+.animate-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s, transform 1s;
+}
+
+.btn-animate {
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.btn-gold:hover {
+    background-color: #FBCE51;
+    color: black;
+}
+
+.btn-black:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-details:hover {
+    background-color: #3057A2;
+    color: white;
+}
+
+.svg-gold circle {
+    fill: #313131;
+}
+
+.svg-gold:hover circle {
+    fill: #FBCE51;
+}
+
+.svg-gold:disabled circle {
+    fill: #D6D6D6;
+}
