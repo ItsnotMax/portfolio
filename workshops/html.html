@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal-window">
+        <form id="form" class="flex flex-col max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md cursor-default">
+            <label for="город" class="block text-lg font-semibold mb-2 cursor-default">Город:</label>
+            <select id="город" class="w-full p-2 border border-gray-300 rounded-md mb-4 cursor-pointer" required>
+                <option value="" disabled selected>Выберите город</option>
+            </select>
+
+            <label for="цех" class="block text-lg font-semibold mb-2 cursor-default">Цех:</label>
+            <select id="цех" class="w-full p-2 border border-gray-300 rounded-md mb-4" disabled required>
+                <option value="" disabled selected>Выберите цех</option>
+            </select>
+
+            <label for="сотрудник" class="block text-lg font-semibold mb-2 cursor-default">Сотрудник:</label>
+            <select id="сотрудник" class="w-full p-2 border border-gray-300 rounded-md mb-4" disabled required>
+                <option value="" disabled selected>Выберите сотрудника</option>
+            </select>
+
+            <label for="бригада" class="block text-lg font-semibold mb-2 cursor-default">Бригада:</label>
+            <select id="бригада" class="w-full p-2 border border-gray-300 rounded-md mb-4" disabled>
+                <option value="" disabled selected>Выберите бригаду</option>
+            </select>
+
+            <label for="смена" class="block text-lg font-semibold mb-2 cursor-default">Смена:</label>
+            <select id="смена" class="w-full p-2 border border-gray-300 rounded-md mb-4" disabled>
+                <option value="" disabled selected>Выберите смену</option>
+            </select>
+
+            <button type="submit"
+                class="reset-btn w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 not-allocated"
+                disabled>
+                Сохранить
+            </button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.js"></script>
+    <script>
+        const form = {
+            selectedCity: "",
+            selectedFactory: "",
+            selectedEmployee: "",
+            selectedTeam: "",
+            selectedShift: "",
+        };
+
+        const mock = {
+            workspaces: {
+                Москва: {
+                    Цех1: ["Иванов", "Петров", "Сидоров"],
+                    Цех2: ["Андреев", "Лебедев"],
+                    Цех3: ["Смирнов", "Кузнецов"],
+                    Цех4: ["Григорьев", "Михайлов"],
+                },
+                СПб: {
+                    Цех1: ["Кузнецов", "Горбунов"],
+                    Цех2: ["Смирнов", "Петров"],
+                    Цех3: ["Федоров"],
+                    Цех4: ["Чернов", "Калинин"],
+                    Цех5: ["Денисов", "Логинов"],
+                },
+                Казань: {
+                    Цех1: ["Сергеева", "Васильева"],
+                    Цех2: ["Егорова", "Алексеев"],
+                    Цех3: ["Бондарев", "Соколова"],
+                },
+                Екатеринбург: {
+                    Цех1: ["Николаев", "Кузьмичев"],
+                    Цех2: ["Крылов", "Рогов"],
+                },
+                Новосибирск: {
+                    Цех1: ["Тимофеев", "Мельников"],
+                    Цех2: ["Максимов", "Панин"],
+                },
+            },
+            teams: ["Бригада1", "Бригада2"],
+            shifts: ["Смена1", "Смена2"],
+        };
+
+        const citySelect = document.getElementById("город");
+        const factorySelect = document.getElementById("цех");
+        const employeeSelect = document.getElementById("сотрудник");
+        const teamSelect = document.getElementById("бригада");
+        const shiftSelect = document.getElementById("смена");
+        const saveButton = document.querySelector("button[type='submit']");
+
+        function updateSelectOptions(select, options) {
+            select.innerHTML = "";
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            defaultOption.textContent = `Выберите ${select.id}`;
+            select.appendChild(defaultOption);
+
+            options.forEach(option => {
+                const opt = document.createElement("option");
+                opt.value = option;
+                opt.textContent = option;
+                select.appendChild(opt);
+            });
+        }
+
+        function updateFactories() {
+            const selectedCity = form.selectedCity;
+            if (selectedCity) {
+                updateSelectOptions(factorySelect, Object.keys(mock.workspaces[selectedCity]));
+                factorySelect.disabled = false;
+            } else {
+                factorySelect.disabled = true;
+                updateSelectOptions(factorySelect, []);
+            }
+        }
+
+        function updateEmployees() {
+            const selectedCity = form.selectedCity;
+            const selectedFactory = form.selectedFactory;
+            if (selectedCity && selectedFactory) {
+                updateSelectOptions(employeeSelect, mock.workspaces[selectedCity][selectedFactory]);
+                employeeSelect.disabled = false;
+            } else {
+                employeeSelect.disabled = true;
+                updateSelectOptions(employeeSelect, []);
+            }
+        }
+
+        function updateTeamsAndShifts() {
+            const selectedCity = form.selectedCity;
+            if (selectedCity) {
+                updateSelectOptions(teamSelect, mock.teams);
+                teamSelect.disabled = false;
+                updateSelectOptions(shiftSelect, mock.shifts);
+                shiftSelect.disabled = false;
+            }
+        }
+
+        citySelect.addEventListener("change", (e) => {
+            form.selectedCity = e.target.value;
+            factorySelect.value = "";
+            employeeSelect.value = "";
+            teamSelect.value = "";
+            shiftSelect.value = "";
+            updateFactories();
+            updateTeamsAndShifts();
+        });
+
+        factorySelect.addEventListener("change", (e) => {
+            form.selectedFactory = e.target.value;
+            employeeSelect.value = "";
+            updateEmployees();
+        });
+
+        employeeSelect.addEventListener("change", (e) => {
+            form.selectedEmployee = e.target.value;
+        });
+
+        teamSelect.addEventListener("change", (e) => {
+            form.selectedTeam = e.target.value;
+        });
+
+        shiftSelect.addEventListener("change", (e) => {
+            form.selectedShift = e.target.value;
+        });
+
+        updateSelectOptions(citySelect, Object.keys(mock.workspaces));
+    </script>
+</body>
+
+</html>
