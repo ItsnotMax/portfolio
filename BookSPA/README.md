@@ -5,5 +5,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 ## Setup
 
 Скачать
+
 Установить зависимости npm i
+
 Запустить npm run dev
