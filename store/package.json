@@ -1,0 +1,37 @@
+{
+	"author": "Максим <makc.9393@mail.ru>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ItsnotMax/portfolio/"
+	},
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@nuxt/content": "^3.4.0",
+		"@nuxt/eslint": "^1.2.0",
+		"@nuxt/icon": "^1.11.0",
+		"@tailwindcss/forms": "^0.5.10",
+		"eslint": "^9.23.0",
+		"gsap": "^3.12.7",
+		"inputmask": "^5.0.9",
+		"nuxt": "^3.16.1",
+		"vue": "^3.5.13"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.20",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.5",
+		"eslint-plugin-vue": "^10.0.0",
+		"postcss": "^8.5.1",
+		"sass": "^1.83.4",
+		"tailwindcss": "^3.4.17"
+	}
+}
