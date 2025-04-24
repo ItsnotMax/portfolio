@@ -2,7 +2,7 @@
 
 
 Hello, I`m Max and this is where I keep my pets! 👋
-## 1. [Here are my gh-pages](https://github.com/ItsnotMax/portfolio/tree/gh-pages)
+## [Here are my gh-pages](https://github.com/ItsnotMax/portfolio/tree/gh-pages)
 
 In various branches you can familiarize yourself with my works.
 
